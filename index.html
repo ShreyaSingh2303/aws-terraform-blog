@@ -1,63 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mastering AWS Cloud Provisioning with Terraform</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Linking to the external CSS -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simplifying AWS Cloud Provisioning with Terraform</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <header class="header">
-        <h1>Mastering AWS Cloud Provisioning with Terraform</h1>
-        <p>Learn how Terraform simplifies cloud infrastructure management for AWS</p>
-    </header>
+  <div class="container">
+    <h1>Simplifying AWS Cloud Provisioning with <span class="highlight">Terraform</span></h1>
 
-    <section class="intro">
-        <h2>What is Terraform?</h2>
-        <p><em>Terraform</em> is an open-source tool developed by HashiCorp, enabling developers to define and provision their infrastructure in a safe, predictable, and efficient manner using <strong>Infrastructure as Code (IaC)</strong>. This eliminates the need for manual provisioning and enables <strong>reproducible infrastructure</strong>.</p>
-        <img src="https://github.com/ShreyaSingh2303/aws-terraform-blog/raw/main/images/terraform2.png" alt="Terraform Logo" class="img-responsive">
-    </section>
+    <p class="intro">
+      In today's cloud-driven environment, managing infrastructure manually can be a hassle—leading to errors and inefficiencies. 
+      <strong>Terraform</strong>, developed by <em>HashiCorp</em>, solves this problem by offering a powerful and declarative Infrastructure as Code (IaC) approach.
+    </p>
 
-    <section class="benefits">
-        <h2>Why Choose Terraform for AWS?</h2>
-        <ul>
-            <li><strong>Automation:</strong> Automates the provisioning and management of AWS resources.</li>
-            <li><strong>Version Control:</strong> Track changes and collaborate seamlessly using version-controlled infrastructure.</li>
-            <li><strong>Multi-cloud Support:</strong> Use Terraform across AWS, Azure, GCP, and other cloud providers.</li>
-            <li><strong>Reusability:</strong> Define reusable modules for scaling your infrastructure.</li>
-            <li><strong>Reduced Errors:</strong> Terraform minimizes manual errors with reproducible configurations.</li>
-        </ul>
-    </section>
+    <h2>✨ What is Terraform?</h2>
+    <p>
+      <strong>Terraform</strong> is an open-source tool that lets you define cloud infrastructure using a simple, human-readable configuration language called <em>HCL (HashiCorp Configuration Language)</em>.
+      With Terraform, developers can build, change, and version infrastructure efficiently and safely.
+    </p>
+    <img src="images/terraform2.png" alt="Terraform Logo" class="blog-img" />
 
-    <section class="commands">
-        <h2>5 Popular Terraform Commands for AWS Cloud Provisioning</h2>
-        <p>Terraform comes with a set of powerful commands to interact with your cloud infrastructure:</p>
-        <ul>
-            <li><strong>terraform init:</strong> Initializes the Terraform working directory.</li>
-            <li><strong>terraform plan:</strong> Previews changes that will be made to your infrastructure.</li>
-            <li><strong>terraform apply:</strong> Applies the changes to your infrastructure based on the Terraform configuration.</li>
-            <li><strong>terraform destroy:</strong> Destroys all infrastructure managed by Terraform.</li>
-            <li><strong>terraform validate:</strong> Validates the configuration syntax and structure.</li>
-        </ul>
-        <img src="https://github.com/ShreyaSingh2303/aws-terraform-blog/raw/main/images/terraform55.png" alt="Terraform Cheat Sheet" class="img-responsive">
-    </section>
+    <h2>🛠️ Key Benefits of Using Terraform with AWS</h2>
+    <ul>
+      <li><strong>Automation:</strong> Automatically deploy, update, and destroy resources.</li>
+      <li><strong>Multi-cloud:</strong> Supports AWS, Azure, Google Cloud, and others.</li>
+      <li><strong>Version Control:</strong> Use Git to manage infrastructure like source code.</li>
+      <li><strong>Consistency:</strong> Deploy same configuration across multiple environments.</li>
+      <li><strong>Error Reduction:</strong> Minimize manual intervention and mistakes.</li>
+    </ul>
 
-    <section class="workflow">
-        <h2>Terraform Workflow</h2>
-        <p>The typical workflow for provisioning AWS infrastructure with Terraform involves several steps:</p>
-        <ol>
-            <li><strong>Write Configuration:</strong> Define your infrastructure as code in `.tf` files.</li>
-            <li><strong>Run terraform init:</strong> Initialize the directory and download any necessary modules.</li>
-            <li><strong>Run terraform plan:</strong> Preview the changes that Terraform will apply.</li>
-            <li><strong>Run terraform apply:</strong> Apply the changes and provision the resources.</li>
-            <li><strong>Run terraform destroy:</strong> Destroy resources when no longer needed.</li>
-        </ol>
-        <img src="https://github.com/ShreyaSingh2303/aws-terraform-blog/raw/main/images/terraform44.png" alt="Terraform Workflow" class="img-responsive">
-    </section>
+    <h2>📘 Terraform Workflow</h2>
+    <p>
+      The Terraform lifecycle follows a predictable set of steps. Here's a visual representation:
+    </p>
+    <img src="images/terraform44.png" alt="Terraform Workflow" class="blog-img" />
+    <ol>
+      <li><strong>terraform init</strong> – Initializes Terraform working directory.</li>
+      <li><strong>terraform validate</strong> – Validates whether configuration files are correct.</li>
+      <li><strong>terraform plan</strong> – Displays what actions Terraform will take.</li>
+      <li><strong>terraform apply</strong> – Applies the configuration and provisions resources.</li>
+      <li><strong>terraform destroy</strong> – Deletes resources created by Terraform.</li>
+    </ol>
 
-    <footer class="footer">
-        <p>Written by: <strong>Shreya Singh</strong></p>
-    </footer>
+    <h2>💻 5 Most Used Terraform Commands for AWS (With Examples)</h2>
+
+    <div class="command-block">
+      <h3><code>terraform init</code></h3>
+      <p>Initializes your Terraform directory. Downloads required plugins and prepares the environment.</p>
+      <pre><code>terraform init</code></pre>
+    </div>
+
+    <div class="command-block">
+      <h3><code>terraform validate</code></h3>
+      <p>Checks whether your code is syntactically valid.</p>
+      <pre><code>terraform validate</code></pre>
+    </div>
+
+    <div class="command-block">
+      <h3><code>terraform plan</code></h3>
+      <p>Shows you what changes Terraform will make without actually applying them.</p>
+      <pre><code>terraform plan -out=tfplan</code></pre>
+    </div>
+
+    <div class="command-block">
+      <h3><code>terraform apply</code></h3>
+      <p>Applies the configuration files and provisions the infrastructure.</p>
+      <pre><code>terraform apply tfplan</code></pre>
+    </div>
+
+    <div class="command-block">
+      <h3><code>terraform destroy</code></h3>
+      <p>Destroys all resources created by Terraform.</p>
+      <pre><code>terraform destroy</code></pre>
+    </div>
+
+    <img src="images/terraform55.png" alt="Terraform Cheat Sheet" class="blog-img" />
+
+    <h2>📍 Real-Life Example</h2>
+    <p>
+      Let's say you need to spin up 2 EC2 instances and a secure S3 bucket on AWS. Instead of manually configuring everything via the AWS console, you can write a Terraform file like this:
+    </p>
+
+    <pre><code>
+resource "aws_instance" "example" {
+  ami           = "ami-0c55b159cbfafe1f0"
+  instance_type = "t2.micro"
+  count         = 2
+}
+
+resource "aws_s3_bucket" "example_bucket" {
+  bucket = "my-terraform-blog-bucket"
+  acl    = "private"
+}
+    </code></pre>
+
+    <p>Then, you just run:</p>
+    <pre><code>
+terraform init
+terraform apply
+    </code></pre>
+
+    <h2>🌐 Conclusion</h2>
+    <p>
+      Terraform isn’t just another tool—it’s a game-changer. Whether you're deploying a complex infrastructure or a basic VM, Terraform makes the process simple, repeatable, and safe. 
+      For students and professionals alike, mastering Terraform is a vital step toward cloud expertise.
+    </p>
+
+    <p class="author">Written by: <strong>Shreya Singh</strong></p>
+  </div>
 </body>
 </html>
-
