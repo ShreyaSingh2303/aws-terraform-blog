@@ -1,116 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Simplifying AWS Cloud Provisioning with Terraform</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Roboto', sans-serif;
-      background-color: #fdfdfd;
-      color: #333;
-      padding: 40px;
-      max-width: 900px;
-      margin: auto;
-    }
-    h1 {
-      color: #1d3557;
-    }
-    h2 {
-      color: #457b9d;
-      margin-top: 30px;
-    }
-    p {
-      font-size: 17px;
-      line-height: 1.6;
-    }
-    ul {
-      background-color: #f1faee;
-      padding: 15px;
-      border-left: 5px solid #457b9d;
-    }
-    li {
-      margin: 8px 0;
-    }
-    code {
-      background-color: #e0f7fa;
-      padding: 3px 6px;
-      border-radius: 4px;
-      font-family: monospace;
-    }
-    .highlight {
-      font-weight: bold;
-      color: #e63946;
-    }
-    .img-box {
-      margin: 20px 0;
-      text-align: center;
-    }
-    .img-box img {
-      width: 100%;
-      max-width: 700px;
-      border: 2px solid #ccc;
-      border-radius: 8px;
-    }
-    .footer {
-      margin-top: 40px;
-      font-style: italic;
-      color: #555;
-      text-align: right;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mastering AWS Cloud Provisioning with Terraform</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Linking to the external CSS -->
 </head>
 <body>
+    <header class="header">
+        <h1>Mastering AWS Cloud Provisioning with Terraform</h1>
+        <p>Learn how Terraform simplifies cloud infrastructure management for AWS</p>
+    </header>
 
-  <h1>🚀 Simplifying <span class="highlight">AWS Cloud Provisioning</span> with <span class="highlight">Terraform</span></h1>
+    <section class="intro">
+        <h2>What is Terraform?</h2>
+        <p><em>Terraform</em> is an open-source tool developed by HashiCorp, enabling developers to define and provision their infrastructure in a safe, predictable, and efficient manner using <strong>Infrastructure as Code (IaC)</strong>. This eliminates the need for manual provisioning and enables <strong>reproducible infrastructure</strong>.</p>
+        <img src="https://github.com/ShreyaSingh2303/aws-terraform-blog/raw/main/images/terraform2.png" alt="Terraform Logo" class="img-responsive">
+    </section>
 
-  <p>In a <em>cloud-driven era</em>, provisioning infrastructure manually is not only time-consuming but also prone to human error. Enter <strong>Terraform</strong> — a powerful <span class="highlight">system provisioning tool</span> by HashiCorp that enables you to manage cloud infrastructure using code.</p>
+    <section class="benefits">
+        <h2>Why Choose Terraform for AWS?</h2>
+        <ul>
+            <li><strong>Automation:</strong> Automates the provisioning and management of AWS resources.</li>
+            <li><strong>Version Control:</strong> Track changes and collaborate seamlessly using version-controlled infrastructure.</li>
+            <li><strong>Multi-cloud Support:</strong> Use Terraform across AWS, Azure, GCP, and other cloud providers.</li>
+            <li><strong>Reusability:</strong> Define reusable modules for scaling your infrastructure.</li>
+            <li><strong>Reduced Errors:</strong> Terraform minimizes manual errors with reproducible configurations.</li>
+        </ul>
+    </section>
 
-  <div class="img-box">
-    <img src="https://miro.medium.com/v2/resize:fit:1200/1*4zU3ECR4KqCZTtnlKXbAdQ.png" alt="Terraform AWS Diagram">
-    <p><em>Image: Terraform managing AWS resources</em></p>
-  </div>
+    <section class="commands">
+        <h2>5 Popular Terraform Commands for AWS Cloud Provisioning</h2>
+        <p>Terraform comes with a set of powerful commands to interact with your cloud infrastructure:</p>
+        <ul>
+            <li><strong>terraform init:</strong> Initializes the Terraform working directory.</li>
+            <li><strong>terraform plan:</strong> Previews changes that will be made to your infrastructure.</li>
+            <li><strong>terraform apply:</strong> Applies the changes to your infrastructure based on the Terraform configuration.</li>
+            <li><strong>terraform destroy:</strong> Destroys all infrastructure managed by Terraform.</li>
+            <li><strong>terraform validate:</strong> Validates the configuration syntax and structure.</li>
+        </ul>
+        <img src="https://github.com/ShreyaSingh2303/aws-terraform-blog/raw/main/images/terraform55.png" alt="Terraform Cheat Sheet" class="img-responsive">
+    </section>
 
-  <h2>✨ What is Terraform?</h2>
-  <p><strong>Terraform</strong> is an <em>open-source Infrastructure as Code (IaC)</em> tool that lets you define and provision your cloud infrastructure using declarative configuration files written in <strong>HashiCorp Configuration Language (HCL)</strong>.</p>
+    <section class="workflow">
+        <h2>Terraform Workflow</h2>
+        <p>The typical workflow for provisioning AWS infrastructure with Terraform involves several steps:</p>
+        <ol>
+            <li><strong>Write Configuration:</strong> Define your infrastructure as code in `.tf` files.</li>
+            <li><strong>Run terraform init:</strong> Initialize the directory and download any necessary modules.</li>
+            <li><strong>Run terraform plan:</strong> Preview the changes that Terraform will apply.</li>
+            <li><strong>Run terraform apply:</strong> Apply the changes and provision the resources.</li>
+            <li><strong>Run terraform destroy:</strong> Destroy resources when no longer needed.</li>
+        </ol>
+        <img src="https://github.com/ShreyaSingh2303/aws-terraform-blog/raw/main/images/terraform44.png" alt="Terraform Workflow" class="img-responsive">
+    </section>
 
-  <ul>
-    <li><strong>Reusable:</strong> Share configurations across teams</li>
-    <li><strong>Version-controlled:</strong> Track changes with Git</li>
-    <li><strong>Automated:</strong> Save time and reduce errors</li>
-  </ul>
-
-  <h2>🛠️ Top Benefits of Using Terraform for AWS</h2>
-  <ul>
-    <li>🔁 <strong>Repeatable Deployments</strong> – Run the same config multiple times</li>
-    <li>🌍 <strong>Multi-Cloud Support</strong> – AWS, Azure, GCP & more</li>
-    <li>📦 <strong>Modular Architecture</strong> – Reuse components easily</li>
-    <li>🧪 <strong>Plan & Validate</strong> – Preview changes before applying</li>
-    <li>🧹 <strong>Destroy Easily</strong> – Tear down infra in one command</li>
-  </ul>
-
-  <h2>📘 5 Most Used Terraform Commands for AWS</h2>
-  <ul>
-    <li><code>terraform init</code> – Initialize your working directory with required plugins</li>
-    <li><code>terraform plan</code> – Preview changes before applying</li>
-    <li><code>terraform apply</code> – Create or update AWS resources</li>
-    <li><code>terraform destroy</code> – Destroy all managed resources</li>
-    <li><code>terraform validate</code> – Check syntax of your .tf files</li>
-  </ul>
-
-  <h2>📍 Real-World Example</h2>
-  <p>Imagine needing to spin up <span class="highlight">two EC2 instances</span> and an <span class="highlight">S3 bucket</span>. Instead of manually clicking through the AWS Console, you can write a few lines of Terraform code and deploy it within minutes.</p>
-
-  <div class="img-box">
-    <img src="https://user-images.githubusercontent.com/107554420/187001337-5cb7b65a-4f75-41ab-bffc-df1f908848ec.png" alt="Terraform EC2 S3 example">
-    <p><em>Image: Output after running terraform apply</em></p>
-  </div>
-
-  <h2>🎯 Final Thoughts</h2>
-  <p><strong>Terraform</strong> is an essential tool for anyone working in cloud computing. With it, you can turn your infrastructure into <em>reliable, trackable, and reusable code</em>. Whether you're a beginner or an experienced DevOps engineer, Terraform will simplify and scale your AWS deployments.</p>
-
-  <p class="footer">Written by: <strong>Shreya Singh</strong></p>
-
+    <footer class="footer">
+        <p>Written by: <strong>Shreya Singh</strong></p>
+    </footer>
 </body>
 </html>
+
